@@ -1,0 +1,32 @@
+.container::after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 0.25rem;
+  left: 0;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.container.ativado::before {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  position: absolute;
+  top: 0.43rem;
+  left: 0.17rem;
+  background-color: #59d78c;
+  border-radius: 50%;
+}
+
+.container.focused::after {
+  border-color: #59d78c;
+  border-width: 2px;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}

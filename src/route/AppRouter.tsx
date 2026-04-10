@@ -8,16 +8,30 @@ import { Result } from "../pages/Result";
 import { NotFound } from "../pages/NotFound";
 import { Layout } from "../layouts/Layout";
 
+import { questions } from "../utils/questions";
+
 export function AppRouter() {
   return (
     <Routes>
       <Route path="/" index element={<Home />} />
 
       <Route path="/" element={<Layout />}>
-        <Route path="/question1" element={<Question1 />} />
-        <Route path="/question2" element={<Question2 />} />
-        <Route path="/question3" element={<Question3 />} />
-        <Route path="/question4" element={<Question4 />} />
+        <Route
+          path="/question1"
+          element={<Question1 question={questions[0]} />}
+        />
+        <Route
+          path="/question2"
+          element={<Question2 question={questions[1]} />}
+        />
+        <Route
+          path="/question3"
+          element={<Question3 question={questions[2]} />}
+        />
+        <Route
+          path="/question4"
+          element={<Question4 question={questions[3]} />}
+        />
       </Route>
 
       <Route path="/result" element={<Result />} />

@@ -1,4 +1,4 @@
-const questions = [
+export const questions = [
   {
     pergunta: "Qual método é utilizado para criar componentes?",
     options: [

@@ -1,12 +1,22 @@
 import { useNavigate } from "react-router";
 import { Button } from "../components/Button";
 
-export function Question4() {
+import { questions } from "../utils/questions";
+import { useState } from "react";
+import { Radio } from "../components/Radio";
+
+type Props = {
+  question: (typeof questions)[number];
+};
+
+export function Question4({ question }: Props) {
   const navigate = useNavigate();
+  const [option, setOption] = useState("");
 
   return (
     <div>
-      <h1>Pegunta 4</h1>
+      <h1 className="text-xl mb-6">{question.pergunta}</h1>
+      <Radio options={question.options} value={option} setValue={setOption} />
       <Button onClick={() => navigate("/result")} title="Resultado" />
     </div>
   );
