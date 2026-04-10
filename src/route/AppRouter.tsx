@@ -34,7 +34,7 @@ export function AppRouter() {
         />
       </Route>
 
-      <Route path="/result" element={<Result />} />
+      <Route path="/result" element={<Result questions={questions} />} />
 
       <Route path="*" element={<NotFound />} />
     </Routes>

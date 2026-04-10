@@ -19,6 +19,7 @@ export function Radio({ options, value, setValue, ...rest }: Props) {
     <div>
       {options.map((option) => (
         <label
+          key={option}
           className={classMerge([
             "block pl-6 mb-4 text-base relative",
             styles.container,

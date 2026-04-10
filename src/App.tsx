@@ -1,5 +1,10 @@
+import { ScoreProvider } from "./contexts/ScoreContext";
 import { AppRouter } from "./route/AppRouter";
 
 export function App() {
-  return <AppRouter />;
+  return (
+    <ScoreProvider>
+      <AppRouter />
+    </ScoreProvider>
+  );
 }

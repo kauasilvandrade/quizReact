@@ -1,4 +1,11 @@
-export const questions = [
+export type Question = {
+  pergunta: string;
+  options: string[];
+  resposta: string;
+  id: string;
+};
+
+export const questions: Question[] = [
   {
     pergunta: "Qual método é utilizado para criar componentes?",
     options: [
