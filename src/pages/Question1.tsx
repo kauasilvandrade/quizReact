@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router";
+import { Button } from "../components/Button";
 
 export function Question1() {
   const navigate = useNavigate();
@@ -6,7 +7,7 @@ export function Question1() {
   return (
     <div>
       <h1>Pergunta 1</h1>
-      <button onClick={() => navigate("/question2")}>Próximo</button>
+      <Button onClick={() => navigate("/question2")} title="Próximo" />
     </div>
   );
 }

@@ -1,11 +1,24 @@
+import { classMerge } from "../../utils/classMerge";
+
 type Props = React.ComponentProps<"button"> & {
   title: string;
+  variant?: "base" | "hero";
 };
 
-export function Button({ title, ...rest }: Props) {
+const variants = {
+  button: {
+    base: "w-40 text-green-300 border-green-300 hover:text-black hover:border-black ",
+    hero: "w-50 text-black border-black hover:text-white hover:border-white",
+  },
+};
+
+export function Button({ title, variant = "base", ...rest }: Props) {
   return (
     <button
-      className="w-50 m-auto py-3 text-base outline-none text-black border border-black rounded-full uppercase cursor-pointer hover:text-white hover:border-white transition"
+      className={classMerge([
+        "m-auto py-3 text-base outline-none border-2 rounded-full uppercase cursor-pointer transition]",
+        variants.button[variant],
+      ])}
       {...rest}
     >
       {title}

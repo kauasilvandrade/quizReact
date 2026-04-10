@@ -10,7 +10,11 @@ export function Home() {
         <h1 className="text-5xl font-bold mb-8">
           Bem vindo ao questionário de React!
         </h1>
-        <Button title="Questionário" onClick={() => navigate("/question1")} />
+        <Button
+          title="Questionário"
+          variant="hero"
+          onClick={() => navigate("/question1")}
+        />
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ export function Layout() {
             Questionário sobre React :)
           </h1>
         </header>
-        <main className="bg-white">
+        <main className="bg-white rounded-4xl p-10">
           <Outlet />
         </main>
       </div>
